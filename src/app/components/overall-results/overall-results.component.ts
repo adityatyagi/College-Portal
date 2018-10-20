@@ -61,7 +61,6 @@ export class OverallResultsComponent implements OnInit {
 
   // navigate to View Details for a particular student
   viewDetails(id) {
-    alert('Navigate to Student with Student Id: ' + id);
     this.router.navigate(['/computerScience/class1/1']);
     // this.router.navigate(['/computerScience/class1/1', result.key]);
     }

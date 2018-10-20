@@ -25,6 +25,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatRippleModule} from '@angular/material/core';
 import { StudentComponent } from './components/student/student.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatBadgeModule} from '@angular/material/badge';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { SemesterResultsComponent } from './components/semester-results/semester-results.component';
 import { OverallResultsComponent } from './components/overall-results/overall-results.component';
@@ -53,6 +54,7 @@ import { OverallResultsComponent } from './components/overall-results/overall-re
     MatInputModule,
     MatPaginatorModule,
     MatSortModule,
+    MatBadgeModule,
     MatIconModule,
     MatRippleModule,
     MatTabsModule,
@@ -63,7 +65,8 @@ import { OverallResultsComponent } from './components/overall-results/overall-re
       {path: '', component:  HomeComponent},
       {path: 'computerScience', component: StreamsComponent},
       {path: 'computerScience/class1', component: ClassComponent},
-      {path: 'computerScience/class1/1', component: StudentComponent}
+      {path: 'computerScience/class1/1', component: StudentComponent},
+      {path: 'notifications', component: NotificationComponent},
     ])
   ],
   providers: [],

@@ -1,0 +1,79 @@
+// breadcrumbs: START
+#bread-crumbs>.breadcrumb {
+    padding: 2rem;
+    font-size: 1.8rem;
+}
+
+#bread-crumbs>.breadcrumb>.active>a {
+    color: #2196f3;
+}
+
+// breadcrumbs: END
+.white-bg {
+    background-color: #fff;
+}
+
+.light-blue {
+    background: #a7d5f9;
+}
+
+.dark-blue {
+    color: #2196f3;
+}
+
+.badgeNotification {
+    position: relative;
+    top: 0.6rem;
+}
+
+#notifications {
+    padding: 2rem;
+}
+
+#notification-message>table {
+    font-size: 1.6rem;
+}
+
+#notification-message>table>tbody>tr>td {
+    padding-bottom: 1.2rem;
+    padding-left: 1.2rem;
+}
+
+#notification-message {
+    padding: 2rem;
+    margin: 2rem;
+    position: relative;
+}
+
+.unread {
+    background: rgb(176, 255, 179);
+    border: 0.1rem solid #4CAF50;
+    border-radius: 2rem;
+}
+
+.read {
+    background: #eee;
+    border: 0.1rem solid #000;
+    border-radius: 2rem;
+}
+
+#markAsRead {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 2rem;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .markAsDoneText {
+        display: none;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {}
