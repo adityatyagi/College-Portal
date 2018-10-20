@@ -1,0 +1,85 @@
+<section class="content">
+    <div class="container-fluid">
+        <div id="bread-crumbs" class="block-header">
+            <!--Breadcrumbs-->
+            <ol class="breadcrumb white-bg">
+                <li><a routerLink="/">All Streams</a></li>
+                <li><a routerLink="/computerScience">Computer Science</a></li>
+                <li class="active"><a routerLink="/computerScience">Class 1</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Class Specific Table-->
+    <div class="container">
+        <div id="streams" class="block-header white-bg">
+            <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+
+            <div class="example-containermat-elevation-z8">
+                <mat-table calss="table-hover" id="class-specific-table" [dataSource]="dataSource" matSort [class.isMobile]="isMobile">
+
+                    <!-- ID Column -->
+                    <ng-container matColumnDef="id">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+                        <mat-cell *matCellDef="let row">
+                            <span class="mobile-label">ID:</span> {{row._id}}
+                        </mat-cell>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+                        <mat-cell *matCellDef="let row">
+                            <span class="mobile-label">Name:</span>{{row.name}}
+                        </mat-cell>
+                    </ng-container>
+
+                    <!--Subject 1 Column -->
+                    <ng-container matColumnDef="subject1">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Subject 1 </mat-header-cell>
+                        <mat-cell *matCellDef="let row">
+                            <span class="mobile-label">Subject 1:</span>{{row.subject1}}%
+                        </mat-cell>
+                    </ng-container>
+
+                    <!-- Subject 2 Column -->
+                    <ng-container matColumnDef="subject2">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Subject 2 </mat-header-cell>
+                        <mat-cell *matCellDef="let row">
+                            <span class="mobile-label">Subject 2:</span>{{row.subject2}}%
+                        </mat-cell>
+                    </ng-container>
+
+                    <!-- Subject 3 Column -->
+                    <ng-container matColumnDef="subject3">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Subject 3 </mat-header-cell>
+                        <mat-cell *matCellDef="let row">
+                            <span class="mobile-label">Subject 3:</span>{{row.subject3}}%
+                        </mat-cell>
+                    </ng-container>
+
+                    <!--Action-->
+                    <ng-container matColumnDef="_id">
+                        <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+
+                        <mat-cell *matCellDef="let row">
+                            <span class="mobile-label">Action:</span>
+                            <button mat-raised-button class="view-details-btn" (click)="viewDetails(row._id)">View Details
+                            <mat-icon>navigate_next</mat-icon>&nbsp;</button>
+                        </mat-cell>
+
+
+                    </ng-container>
+
+                    <mat-header-row mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple>
+                    </mat-row>
+                </mat-table>
+
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+            </div>
+        </div>
+    </div>
+</section>

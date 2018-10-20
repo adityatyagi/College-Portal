@@ -1,0 +1,42 @@
+// breadcrumbs: START
+#bread-crumbs>.breadcrumb {
+    padding: 2rem;
+    font-size: 1.8rem;
+}
+
+#bread-crumbs>.breadcrumb>.active>a {
+    color: #2196f3;
+}
+
+// breadcrumbs: END
+.dark-blue {
+    color: #2196f3;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+
+.light-blue {
+    background: #a7d5f9;
+}
+
+#streams {
+    padding: 2rem;
+    box-shadow: 9px 10px 21px -8px rgba(33, 150, 243, 1);
+}
+
+.stream-card {
+    padding: 1.2rem;
+}
+
+.stream-card>a {
+    text-decoration: none;
+}
+
+.mat-card:hover {
+    background: #ecef50;
+    transform: scale(1.03);
+    transition: ease-in 1ms;
+    font-weight: 600;
+}

@@ -1,6 +1,9 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
+// for gestures support on mobile devices
+import 'hammerjs';
+
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
