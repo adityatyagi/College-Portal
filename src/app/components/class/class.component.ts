@@ -1,5 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+// for routing
+import { Router } from '@angular/router';
 
 export interface StudentElement {
   _id: number;
@@ -50,7 +52,7 @@ export class ClassComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() {
+  constructor( private router: Router) {
 
   }
 
@@ -69,7 +71,9 @@ export class ClassComponent implements OnInit {
 
   // navigate to View Details for a particular student
   viewDetails(id) {
-    alert('Navigate to Student with Student Id: ' + id);
+    this.router.navigate(['/computerScience/class1/1']);
+    // this.router.navigate(['/computerScience/class1/1', result.key]);
+    }
   }
-}
+
 

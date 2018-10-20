@@ -29,12 +29,13 @@ const ELEMENT_DATA: SpecificStudentData[] = [
   {_id: 3, id: 3, subject: 'Subject 3', midsem1: 42, midsem2: 12, endsem: 65, eligible: 'Yes'}
 ];
 
+
 @Component({
-  selector: 'app-student',
-  templateUrl: './student.component.html',
-  styleUrls: ['./student.component.scss']
+  selector: 'app-overall-results',
+  templateUrl: './overall-results.component.html',
+  styleUrls: ['./overall-results.component.scss']
 })
-export class StudentComponent implements OnInit {
+export class OverallResultsComponent implements OnInit {
   displayedColumns: string[] = ['id', 'subject', 'midsem1', 'midsem2', 'endsem', 'eligible', '_id'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
@@ -64,4 +65,6 @@ export class StudentComponent implements OnInit {
     this.router.navigate(['/computerScience/class1/1']);
     // this.router.navigate(['/computerScience/class1/1', result.key]);
     }
+
 }
+

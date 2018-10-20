@@ -26,10 +26,6 @@
     position: relative;
 }
 
-#brief-info>img {
-    vertical-align: initial;
-}
-
 #info {
     padding-left: 2.2rem;
     display: inline-block;
@@ -43,7 +39,7 @@
     right: 2rem;
 }
 
-#info>span>.mat-icon {
+#info>.mat-icon {
     position: relative;
     top: 0.8rem;
 }
@@ -115,38 +111,12 @@ th.mat-sort-header-sorted {
     display: none;
 }
 
-.mat-tab-label-content {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 // Table: END
-// Personal details
-#personal-info>table {
-    font-size: 1.6rem;
-}
-
-#personal-info>table>tbody>tr>td {
-    padding-bottom: 1.2rem;
-}
-
 // -------------- MEDIA QUERIES -----------------
 
 /* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
-    #brief-info>img {
-        position: relative;
-        margin-bottom: -1rem;
-    }
-    #info {
-        padding-left: 2.2rem;
-        display: inline-block;
-        position: relative;
-        top: -1rem;
-        margin-top: 2rem;
-        left: -2rem;
-    }
     // Table:Start
     .mobile-label {
         width: 80px;
@@ -169,10 +139,6 @@ th.mat-sort-header-sorted {
         background-color: #fff;
         margin-bottom: -3.5rem;
     }
-    #bread-crumbs>.breadcrumb {
-        padding: 2rem;
-        font-size: 1.4rem;
-    }
     #class-specific-table {
         border-bottom: 0.3rem solid #2196f3;
     }
@@ -181,26 +147,17 @@ th.mat-sort-header-sorted {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
-@media only screen and (min-width: 600px) {
-    #brief-info>img {
-        position: relative;
-        top: -3rem;
-        margin-bottom: -1rem;
-    }
-    #personal-info>table {
-        width: 40%;
-    }
+@media only screen and (min-width: 600px) {}
+
+.mat-tab-label-content {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 
 /* Medium devices (landscape tablets, 768px and up) */
 
-@media only screen and (min-width: 768px) {
-    #brief-info>img {
-        position: relative;
-        margin-bottom: -2rem;
-    }
-}
+@media only screen and (min-width: 768px) {}
 
 
 /* Large devices (laptops/desktops, 992px and up) */

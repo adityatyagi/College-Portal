@@ -1,0 +1,78 @@
+<div id="overall-result-heading">
+    <h3>Overall Results</h3>
+</div>
+<!--Midsem, Endsem Table-->
+<div id="table-data" class="block-header white-bg">
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+
+    <div class="example-container mat-elevation-z8">
+        <mat-table calss="table-hover" id="class-specific-table" [dataSource]="dataSource" matSort [class.isMobile]="isMobile">
+
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <span class="mobile-label">ID:</span> {{row.id}}
+                </mat-cell>
+            </ng-container>
+
+            <!-- Subject -->
+            <ng-container matColumnDef="subject">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Subject </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <span class="mobile-label">Subject:</span>{{row.subject}}
+                </mat-cell>
+            </ng-container>
+
+            <!--Mid-Sem 1 -->
+            <ng-container matColumnDef="midsem1">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Mid-Semester 1 </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <span class="mobile-label">Mid-Semester 1 :</span>{{row.midsem1}}%
+                </mat-cell>
+            </ng-container>
+
+            <!-- Mid-Sem 2 -->
+            <ng-container matColumnDef="midsem2">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Mid-Semester 2 </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <span class="mobile-label">Mid-Semester 2:</span>{{row.midsem2}}%
+                </mat-cell>
+            </ng-container>
+
+            <!-- End-Semester -->
+            <ng-container matColumnDef="endsem">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> End-Semester </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <span class="mobile-label">End-Semester:</span>{{row.endsem}}%
+                </mat-cell>
+            </ng-container>
+
+            <!-- Eligible -->
+            <ng-container matColumnDef="eligible">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Eligible </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                    <span class="mobile-label">Eligible:</span>{{row.eligible}}
+                </mat-cell>
+            </ng-container>
+
+            <!--Detailed Attendance-->
+            <ng-container matColumnDef="_id">
+                <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+
+                <mat-cell *matCellDef="let row">
+                    <span class="mobile-label">Action:</span>
+                    <button mat-raised-button class="view-details-btn" (click)="viewDetails(row._id)">Detailed Attendance</button>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple>
+            </mat-row>
+        </mat-table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
+</div>

@@ -5,7 +5,7 @@
             <ol class="breadcrumb white-bg">
                 <li><a routerLink="/">All Streams</a></li>
                 <li><a routerLink="/computerScience">Computer Science</a></li>
-                <li class="active"><a routerLink="/computerScience">Class 1</a></li>
+                <li class="active"><a routerLink="/computerScience/class1">Class 1</a></li>
             </ol>
         </div>
     </div>
@@ -17,14 +17,14 @@
                 <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
             </mat-form-field>
 
-            <div class="example-containermat-elevation-z8">
+            <div class="example-container mat-elevation-z8">
                 <mat-table calss="table-hover" id="class-specific-table" [dataSource]="dataSource" matSort [class.isMobile]="isMobile">
 
                     <!-- ID Column -->
                     <ng-container matColumnDef="id">
                         <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
                         <mat-cell *matCellDef="let row">
-                            <span class="mobile-label">ID:</span> {{row._id}}
+                            <span class="mobile-label">ID:</span> {{row.id}}
                         </mat-cell>
                     </ng-container>
 

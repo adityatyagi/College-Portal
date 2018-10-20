@@ -24,6 +24,10 @@ import { MatSortModule } from '@angular/material';
 import {MatIconModule} from '@angular/material/icon';
 import {MatRippleModule} from '@angular/material/core';
 import { StudentComponent } from './components/student/student.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { SemesterResultsComponent } from './components/semester-results/semester-results.component';
+import { OverallResultsComponent } from './components/overall-results/overall-results.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +39,9 @@ import { StudentComponent } from './components/student/student.component';
     NotificationComponent,
     DetailedAttendanceComponent,
     HomeComponent,
-    StudentComponent
+    StudentComponent,
+    SemesterResultsComponent,
+    OverallResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -49,12 +55,15 @@ import { StudentComponent } from './components/student/student.component';
     MatSortModule,
     MatIconModule,
     MatRippleModule,
+    MatTabsModule,
+    MatExpansionModule,
     RouterModule.forRoot([
 
       // routes for anonymous users
       {path: '', component:  HomeComponent},
       {path: 'computerScience', component: StreamsComponent},
       {path: 'computerScience/class1', component: ClassComponent},
+      {path: 'computerScience/class1/1', component: StudentComponent}
     ])
   ],
   providers: [],

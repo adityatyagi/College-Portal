@@ -1,3 +1,132 @@
-<p>
-  student works!
-</p>
+<section class="content">
+    <div class="container-fluid">
+        <div id="bread-crumbs" class="block-header">
+            <!--Breadcrumbs-->
+            <ol class="breadcrumb white-bg">
+                <li><a routerLink="/">All Streams</a></li>
+                <li><a routerLink="/computerScience">Computer Science</a></li>
+                <li><a routerLink="/computerScience/class1">Class 1</a></li>
+                <li class="active"><a routerLink="/computerScience/class1/1">Aditya Tyagi</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Student Specific Content - Brief Info-->
+    <div id="brief-info" class="container white-bg">
+        <!--Profile Image-->
+        <img src="./../../../assets/images/aditya.jpeg" width="140" height="104" alt="Student Image" class="img-thumbnail">
+
+        <!--Brief Info-->
+        <div id="info">
+            <h3>Aditya Tyagi</h3>
+            <span><mat-icon class="mat_icon_info">phone</mat-icon>&nbsp; 8447478305</span><br>
+            <span><mat-icon class="mat_icon_info">email</mat-icon>&nbsp; tyagi.aditya844@hotmail.com</span><br>
+            <span><mat-icon class="mat_icon_info">trending_up</mat-icon>&nbsp; Semester 4</span><br>
+            <span><mat-icon class="mat_icon_info">label_important</mat-icon>&nbsp; IT-F9</span>
+
+        </div>
+
+        <!--Send Mail-->
+        <button mat-raised-button color="primary">Send Mail</button>
+    </div>
+
+    <div id="detail-info" class="container white-bg">
+        <mat-tab-group id="matTabsGroupTable" mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+            <!--Academic-->
+            <mat-tab label="Academic">
+                <!--Overall Results Table-->
+                <app-overall-results></app-overall-results>
+
+                <!--Semester Results Table-->
+                <app-semester-results></app-semester-results>
+            </mat-tab>
+
+            <!--Personal-->
+            <mat-tab label="Personal">
+                <br>
+                <!--Contact Details-->
+                <div id="contact-details">
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <h4>Personal Details</h4>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <!--Body of the panel: Starts-->
+                            <div id="personal-info">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Name:</strong></td>
+                                            <td>Aditya Tyagi</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Phone Number:</strong></td>
+                                            <td>8447478305</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Email:</strong></td>
+                                            <td>tyagi.aditya844@hotmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Address:</strong></td>
+                                            <td>Address: WZ-59 A Basai Darapur, New Delhi - 110015</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--Body of the panel: Ends-->
+                        </mat-expansion-panel>
+                        <br>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <h4>Admission Details</h4>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <!--Body of the panel: Starts-->
+                            <!--Body of the panel: Starts-->
+                            <div id="personal-info">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Enrollment Number:</strong></td>
+                                            <td>01415603114</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Date of Admission:</strong></td>
+                                            <td>24 August, 2014</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Stream:</strong></td>
+                                            <td>Information Technology (I.T)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Course:</strong></td>
+                                            <td>B. Tech</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Shift:</strong></td>
+                                            <td>Morning (8:00 am - 2:00 pm)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Current Section:</strong></td>
+                                            <td>IT-F9</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Current Semester:</strong></td>
+                                            <td>4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--Body of the panel: Ends-->
+                            <!--Body of the panel: Ends-->
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</section>
