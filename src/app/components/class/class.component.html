@@ -62,11 +62,11 @@
 
                     <!--Action-->
                     <ng-container matColumnDef="_id">
-                        <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef> View Details </mat-header-cell>
 
                         <mat-cell *matCellDef="let row">
                             <span class="mobile-label">Action:</span>
-                            <button mat-raised-button class="view-details-btn" (click)="viewDetails(row._id)">View Details
+                            <button mat-raised-button class="view-details-btn" (click)="viewDetails(row._id)">
                             <mat-icon>navigate_next</mat-icon>&nbsp;</button>
                         </mat-cell>
 
