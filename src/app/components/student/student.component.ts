@@ -35,6 +35,7 @@ const ELEMENT_DATA: SpecificStudentData[] = [
   styleUrls: ['./student.component.scss']
 })
 export class StudentComponent implements OnInit {
+  panelOpenState = false;
   displayedColumns: string[] = ['id', 'subject', 'midsem1', 'midsem2', 'endsem', 'eligible', '_id'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 

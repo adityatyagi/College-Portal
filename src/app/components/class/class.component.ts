@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 // for routing
 import { Router } from '@angular/router';
 
@@ -46,14 +47,21 @@ templateUrl: './class.component.html',
 styleUrls: ['./class.component.scss'],
 })
 export class ClassComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'subject1', 'subject2', 'subject3', '_id'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor( private router: Router) {
+  displayedColumns: string[] = ['id', 'name', 'subject1', 'subject2', 'subject3', '_id'];
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
+  constructor( private router: Router, breakpointObserver: BreakpointObserver) {
+    breakpointObserver.observe(['(max-width: 600px)']).subscribe(result => {
+      // showing selected columns in mobile view
+      this.displayedColumns = result.matches ?
+          ['id', 'name', 'subject1', 'subject2', 'subject3', '_id'] :
+          ['id', 'name', 'subject1', 'subject2', 'subject3', '_id'];
+    });
   }
 
   ngOnInit() {
