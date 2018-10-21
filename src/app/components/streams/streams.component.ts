@@ -10,7 +10,7 @@ export class StreamsComponent implements OnInit {
   stream: string;
   finalClassData: {};
   newObject: {};
-  finalObj: {};
+  finalObj: any;
   streamName: {};
 
   // stream data - Breadcrumb
