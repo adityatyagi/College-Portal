@@ -2,7 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
-## Development server
+## Screenshots
+### Particular Student Details
+![eb college portal1](https://user-images.githubusercontent.com/18363595/47267183-d8286180-d55d-11e8-861a-171d1bf7ba18.png)
+
+### Notifications
+![eb college portal2](https://user-images.githubusercontent.com/18363595/47267184-d8c0f800-d55d-11e8-9195-0a26523a1eb7.png)
+
+### Class-Wise
+![eb college portal3](https://user-images.githubusercontent.com/18363595/47267185-d8c0f800-d55d-11e8-922e-3729a1e952f5.png)
+
+### Stream-Wise
+![eb college portal4](https://user-images.githubusercontent.com/18363595/47267186-d9598e80-d55d-11e8-9226-6ab800c6d266.png)
+
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
