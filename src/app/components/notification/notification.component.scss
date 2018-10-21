@@ -8,6 +8,10 @@
     color: #2196f3;
 }
 
+#notifications {
+    margin-bottom: 2rem;
+}
+
 // breadcrumbs: END
 .white-bg {
     background-color: #fff;
@@ -88,6 +92,10 @@
     }
     .desktop-mark-btns {
         display: none;
+    }
+    #bread-crumbs>.breadcrumb {
+        padding: 2rem;
+        font-size: 1.4rem;
     }
 }
 
