@@ -46,3 +46,10 @@
     font-weight: 600;
     color: #2196f3;
 }
+
+@media(max-width: 600px) {
+    #bread-crumbs>.breadcrumb {
+        padding: 2rem;
+        font-size: 1.4rem;
+    }
+}

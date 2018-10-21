@@ -50,7 +50,6 @@
 
 #detail-info {
     margin-top: 2rem;
-    padding: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -103,7 +102,7 @@ th.mat-sort-header-sorted {
     display: flex;
     flex-direction: column;
     max-height: 500px;
-    min-width: 300px;
+    //min-width: 300px;
 }
 
 #class-specific-table {
@@ -211,3 +210,7 @@ th.mat-sort-header-sorted {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
 @media only screen and (min-width: 1200px) {}
+
+.mat-tab-body-content {
+    height: unset!important;
+}
