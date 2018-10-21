@@ -13,6 +13,10 @@
     color: #2196f3;
 }
 
+.dark-blue-bg {
+    background: #2196f3;
+}
+
 .white-bg {
     background-color: #fff;
 }
@@ -35,8 +39,10 @@
 }
 
 .mat-card:hover {
-    background: #ecef50;
+    background: #FFEB3B;
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
     transition: ease-in 1ms;
     font-weight: 600;
+    color: #2196f3;
 }

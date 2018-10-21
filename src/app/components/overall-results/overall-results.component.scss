@@ -111,6 +111,11 @@ th.mat-sort-header-sorted {
     display: none;
 }
 
+#detailed-att-btn>.mat-button-wrapper {
+    position: relative !important;
+    left: 0.2em !important;
+}
+
 // Table: END
 // -------------- MEDIA QUERIES -----------------
 
@@ -122,6 +127,7 @@ th.mat-sort-header-sorted {
         width: 80px;
         display: inline-block;
         font-weight: bold;
+        margin-right: 2rem;
     }
     .mat-header-row {
         display: none;

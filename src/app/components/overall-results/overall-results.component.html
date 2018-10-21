@@ -60,11 +60,11 @@
 
             <!--Detailed Attendance-->
             <ng-container matColumnDef="_id">
-                <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+                <mat-header-cell *matHeaderCellDef> Detailed Attendance </mat-header-cell>
 
                 <mat-cell *matCellDef="let row">
-                    <span class="mobile-label">Action:</span>
-                    <button mat-raised-button class="view-details-btn" (click)="viewDetails(row._id)">Detailed Attendance</button>
+                    <span class="mobile-label">Detailed Attendance:</span>
+                    <button id="detailed-att-btn" mat-raised-button class="view-details-btn btn-sm" (click)="viewDetails(row._id)">View</button>
                 </mat-cell>
             </ng-container>
 

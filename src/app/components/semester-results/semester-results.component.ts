@@ -20,9 +20,9 @@ export interface SemesterSpecificData {
 
 // dataset from API for Computer Science - Class 1
 const ELEMENT_DATA: SemesterSpecificData[] = [
-  {_id: 1, id: 1, subject: 'Subject 1', semester1: 75, semester2: 94, semester3: 70, semester4: 72, semester5: '', semester6: '', semester7: '', semester8: ''},
-  {_id: 2, id: 2, subject: 'Subject 2', semester1: 65 , semester2: 81, semester3: 78, semester4: 74, semester5: '', semester6: '', semester7: '', semester8: ''},
-  {_id: 3, id: 3, subject: 'Subject 3', semester1: 82, semester2: 72, semester3: 85, semester4: 84, semester5: '', semester6: '', semester7: '', semester8: ''}
+  {_id: 1, id: 1, subject: 'Subject 1', semester1: 75, semester2: 94, semester3: 70, semester4: 72, semester5: 0, semester6: 0, semester7: 0, semester8: 0},
+  {_id: 2, id: 2, subject: 'Subject 2', semester1: 65 , semester2: 81, semester3: 78, semester4: 74, semester5: 0, semester6: 0, semester7: 0, semester8: 0},
+  {_id: 3, id: 3, subject: 'Subject 3', semester1: 82, semester2: 72, semester3: 85, semester4: 84, semester5: 0, semester6: 0, semester7:0 , semester8: 0}
 ];
 
 @Component({
