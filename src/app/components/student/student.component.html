@@ -4,9 +4,9 @@
             <!--Breadcrumbs-->
             <ol class="breadcrumb white-bg">
                 <li><a routerLink="/">All Streams</a></li>
-                <li><a routerLink="/computerScience">Computer Science</a></li>
-                <li><a routerLink="/computerScience/class1">Class 1</a></li>
-                <li class="active"><a routerLink="/computerScience/class1/1">Aditya Tyagi</a></li>
+                <li><a routerLink="/stream/{{stream}}">{{streamName}}</a></li>
+                <li><a routerLink="/stream/{{stream}}/{{classId}}">Class {{classId}}</a></li>
+                <li class="active"><a routerLink="/stream/{{stream}}/{{classId}}/{{studentId}}">{{studentName}}</a></li>
             </ol>
         </div>
     </div>
@@ -18,7 +18,7 @@
 
         <!--Brief Info-->
         <div id="info">
-            <h3>Aditya Tyagi</h3>
+            <h3>{{studentName}}</h3>
             <span><mat-icon class="mat_icon_info">phone</mat-icon>&nbsp; 8447478305</span><br>
             <span><mat-icon class="mat_icon_info">email</mat-icon>&nbsp; tyagi.aditya844@hotmail.com</span><br>
             <span><mat-icon class="mat_icon_info">trending_up</mat-icon>&nbsp; Semester 4</span><br>
@@ -59,7 +59,7 @@
                                     <tbody>
                                         <tr>
                                             <td><strong>Name:</strong></td>
-                                            <td>Aditya Tyagi</td>
+                                            <td>{{studentName}}</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Phone Number:</strong></td>

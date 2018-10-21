@@ -129,67 +129,13 @@
                         <span>Streams</span>
                     </a>
                     <ul class="ml-menu">
-                        <li>
+                        <li *ngFor="let item of navItems">
                             <a href="javascript:void(0);" class="menu-toggle">
-                                <span>Computer Science (CSE)</span>
+                                <span>{{item.streamName}}</span>
                             </a>
                             <ul class="ml-menu">
-                                <li>
-                                    <a routerLink="/computerScience/class1">Class 1</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Class 2</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Class 3</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="menu-toggle">
-                                <span>Information Technology (IT)</span>
-                            </a>
-                            <ul class="ml-menu">
-                                <li>
-                                    <a href="javascript:void(0);">Class 1</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Class 2</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Class 3</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="menu-toggle">
-                                <span>Electrical (ECE)</span>
-                            </a>
-                            <ul class="ml-menu">
-                                <li>
-                                    <a href="javascript:void(0);">Class 1</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Class 2</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Class 3</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="menu-toggle">
-                                <span>Mechanical (ME)</span>
-                            </a>
-                            <ul class="ml-menu">
-                                <li>
-                                    <a href="javascript:void(0);">Class 1</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Class 2</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Class 3</a>
+                                <li *ngFor="let c of item.children">
+                                    <a routerLink="{{c.route}}">{{c.className}}</a>
                                 </li>
                             </ul>
                         </li>

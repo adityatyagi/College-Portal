@@ -2,7 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 // for routing
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 export interface StudentElement {
   _id: number;
@@ -54,8 +54,24 @@ export class ClassComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'subject1', 'subject2', 'subject3', '_id'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+  stream: string;
+  classId: string;
+  streamName: {};
+  newObject: {};
 
-  constructor( private router: Router, breakpointObserver: BreakpointObserver) {
+  // stream data - Breadcrumb
+  streamData = {
+    informationTechnology: 'Information Technology',
+    computerScience: 'Computer Science',
+    electrical: 'Electrical',
+    mechanical: 'Mechanical',
+    tool: 'Tool Engineering',
+    chemical: 'Chemical Engineering',
+    biochemical: 'Bio-Chemical',
+    civil: 'Civil'
+  };
+
+  constructor( private router: Router, breakpointObserver: BreakpointObserver, private route: ActivatedRoute) {
     breakpointObserver.observe(['(max-width: 600px)']).subscribe(result => {
       // showing selected columns in mobile view
       this.displayedColumns = result.matches ?
@@ -65,6 +81,12 @@ export class ClassComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.stream = params.get('stream');
+      this.classId = params.get('classId');
+      // filter stream
+      this.streamName = this.copyObjectProps(this.streamData, [this.stream]);
+    });
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
@@ -76,12 +98,10 @@ export class ClassComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
-  // navigate to View Details for a particular student
-  viewDetails(id) {
-    this.router.navigate(['/computerScience/class1/1']);
-    // this.router.navigate(['/computerScience/class1/1', result.key]);
-    }
-  }
+  copyObjectProps(source, keys) {
+    this.newObject = source[keys];
+    return this.newObject;
+ }
+}
 
 

@@ -4,7 +4,7 @@
             <!--Breadcrumbs-->
             <ol class="breadcrumb white-bg">
                 <li><a routerLink="/">All Streams</a></li>
-                <li class="active"><a routerLink="/computerScience">Computer Science</a></li>
+                <li class="active"><a routerLink="/stream/{{stream}}">{{streamName}}</a></li>
             </ol>
         </div>
     </div>
@@ -13,46 +13,9 @@
     <div>
         <div id="streams" class="block-header dark-blue-bg">
             <div class="row">
-                <div class="col-md-3 stream-card">
-                    <a routerLink="/computerScience/class1">
-                        <mat-card matRipple>Class 1</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Class 2</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Class 3</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Class 4</mat-card>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 stream-card ">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Class 5</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Class 6</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Class 7</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Class 8</mat-card>
+                <div *ngFor="let data of finalObj.classes; let i = index" class="col-md-3 stream-card">
+                    <a routerLink="/stream/{{stream}}/{{i+1}}">
+                        <mat-card matRipple>{{data}}</mat-card>
                     </a>
                 </div>
             </div>

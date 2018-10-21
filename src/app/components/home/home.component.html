@@ -12,46 +12,9 @@
     <div>
         <div id="streams" class="block-header dark-blue-bg">
             <div class="row">
-                <div class="col-md-3 stream-card">
-                    <a routerLink="/computerScience">
-                        <mat-card matRipple>Computer Science</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Information Technology</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Electrical</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Mechanical</mat-card>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 stream-card ">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Tool Engineering</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Chemical Engineering</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Bio-Chemical</mat-card>
-                    </a>
-                </div>
-                <div class="col-md-3 stream-card">
-                    <a href="javascript:void(0);">
-                        <mat-card matRipple>Civil Engineering</mat-card>
+                <div *ngFor="let data of dataStreams;" class="col-md-3 stream-card">
+                    <a routerLink="/stream/{{data._pathName}}">
+                        <mat-card matRipple>{{data.stream}}</mat-card>
                     </a>
                 </div>
             </div>

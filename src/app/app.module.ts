@@ -63,10 +63,10 @@ import { OverallResultsComponent } from './components/overall-results/overall-re
 
       // routes for anonymous users
       {path: '', component:  HomeComponent},
-      {path: 'computerScience', component: StreamsComponent},
-      {path: 'computerScience/class1', component: ClassComponent},
-      {path: 'computerScience/class1/1', component: StudentComponent},
-      {path: 'notifications', component: NotificationComponent},
+      {path: 'stream/:stream', component: StreamsComponent},
+      {path: 'stream/:stream/:classId', component: ClassComponent},
+      {path: 'stream/:stream/:classId/:studentId', component: StudentComponent},
+      {path: 'notifications', component: NotificationComponent}
     ])
   ],
   providers: [],

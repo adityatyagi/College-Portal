@@ -4,8 +4,8 @@
             <!--Breadcrumbs-->
             <ol class="breadcrumb white-bg">
                 <li><a routerLink="/">All Streams</a></li>
-                <li><a routerLink="/computerScience">Computer Science</a></li>
-                <li class="active"><a routerLink="/computerScience/class1">Class 1</a></li>
+                <li><a routerLink="/stream/{{stream}}">{{streamName}}</a></li>
+                <li class="active"><a routerLink="/{{stream}}/{{classId}}">Class {{classId}}</a></li>
             </ol>
         </div>
     </div>
@@ -66,7 +66,7 @@
 
                         <mat-cell *matCellDef="let row">
                             <span class="mobile-label">View Details:</span>
-                            <button mat-raised-button class="view-details-btn" (click)="viewDetails(row._id)">
+                            <button mat-raised-button class="view-details-btn" [routerLink]="['/stream',stream,classId,row._id]">
                             <mat-icon>navigate_next</mat-icon>&nbsp;</button>
                         </mat-cell>
 
